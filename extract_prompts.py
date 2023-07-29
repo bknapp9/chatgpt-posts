@@ -156,7 +156,12 @@ if __name__ == '__main__':
                     if len(file_paths) >= 1:
                         pass
                     else:
-                        download_image(10)
+                        folder_id = '13O0xJ2tOIWp53KNMH16wVcskR2tHB0fZ'  # Replace with the ID of the Google Drive folder
+                        credentials_path = 'credentials.json'  # Replace with the path to your service account credentials
+                        output_folder = './Imagenes'  # Replace with the desired output folder
+
+                        r = 10
+                        download_images_from_folder(folder_id, output_folder, r)
 
                     file_path, file_paths = get_file_path(directory)
                     image_id = upload_image_wordpress(file_path)
